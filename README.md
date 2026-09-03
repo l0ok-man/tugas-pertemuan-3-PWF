@@ -1,22 +1,26 @@
-# Sistem Perpustakaan Berbasis Object-Oriented Programming (OOP)
+# Sistem Perpustakaan OOP - Pemrograman Web (PWF) Pertemuan 3
 
-Repositori ini berisi implementasi sistem perpustakaan sederhana menggunakan konsep **Object-Oriented Programming (OOP)** pada bahasa pemrograman **PHP**, yang dikembangkan untuk memenuhi tugas mata kuliah **Pemrograman Web (PWF) - Pertemuan 3**.
+Proyek ini mengimplementasikan konsep **Object-Oriented Programming (OOP)** pada bahasa pemrograman **PHP**, yang mencakup **Class & Object**, **Encapsulation**, **Inheritance**, dan **Polymorphism**.
 
-## Rencana Fitur Utama
-1. **Manajemen Buku Fisik (`Book`)**: Pengelolaan data buku, stok fisik, validasi ketersediaan, serta mekanisme peminjaman dan pengembalian.
-2. **Manajemen Anggota (`Member`)**: Pengelolaan identitas peminjam dan pencatatan riwayat buku yang sedang dipinjam.
-3. **Pewarisan Buku Digital (`DigitalBook`)**: Penerapan konsep *Inheritance* untuk buku elektronik (e-book) dengan atribut ukuran berkas dan tautan unduhan.
-
-## Struktur Berkas
+## Berkas dalam Repositori
+- `Book.php` : Kelas induk (*parent class*) untuk buku fisik
+- `Member.php` : Kelas untuk anggota peminjam buku
+- `DigitalBook.php` : Kelas turunan (*child class*) dari `Book` yang menerapkan *inheritance*
+- `index.php` : Skrip simulasi peminjaman buku fisik dan digital
+- `README.md` : Dokumentasi repositori
 - `.gitignore` : Berkas pengecualian Git
-- `README.md` : Dokumentasi proyek
-- `Book.php` : Kelas induk untuk buku fisik
-- `Member.php` : Kelas untuk anggota peminjam
-- `DigitalBook.php` : Kelas turunan dari Book untuk buku digital
-- `index.php` : Titik masuk utama (entry point) dan demonstrasi sistem
 
-## Petunjuk Menjalankan
-Pastikan PHP CLI (versi 8.0 atau lebih baru) telah terpasang pada komputer Anda:
+## Konsep OOP yang Diterapkan
+1. **Encapsulation**: Properti pada class dilindungi menggunakan `protected` dan `private`.
+2. **Inheritance**: `DigitalBook` mewarisi properti dan method dari `Book` (`class DigitalBook extends Book`).
+3. **Polymorphism**: Override method `getInfo()` dan `decreaseStock()` pada `DigitalBook`.
+
+## Cara Menjalankan
 ```bash
 php index.php
 ```
+
+## Riwayat 3 Commit
+1. `Initial library OOP project`
+2. `Add Book and Member classes`
+3. `Add DigitalBook inheritance`
