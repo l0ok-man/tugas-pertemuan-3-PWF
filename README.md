@@ -13,7 +13,6 @@ Proyek ini mengimplementasikan konsep **Object-Oriented Programming (OOP)** pada
 ## Konsep OOP yang Diterapkan
 1. **Encapsulation**: Properti pada class dilindungi menggunakan `protected` dan `private`.
 2. **Inheritance**: `DigitalBook` mewarisi properti dan method dari `Book` (`class DigitalBook extends Book`).
-3. **Polymorphism**: Override method `getInfo()` dan `decreaseStock()` pada `DigitalBook`.
 
 ## Cara Menjalankan
 ```bash
